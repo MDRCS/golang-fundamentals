@@ -91,3 +91,32 @@ as NPM or Maven, go install new packages from there repositories as example belo
       and allows you to enable another 50), it’s inevitable that your team disagrees with some of its suggestions. 
       You can configure which linters are enabled and which files they analyze by including a file named .golangci.yml 
      at the root of your project. The documentation for the file format is found at https://github.com/golangci/golangci-lint#config-file.
+
+3- Backwards Compatibility :
+
+  - Golang could not maintain backward compatibility so to test your software before updating to a newer version :
+    One option is to install a secondary Go environment. For example, if you are currently running version 1.15.2 and wanted to try out version 1.15.6 of Go, 
+    you would use the following commands:
+    
+    $ `go get golang.org/dl/go.1.15.6`
+    $ `go1.15.6 download`
+    
+    You can then use the command go1.15.6 instead of the go command to see if version 1.15.6 works for your programs.
+    $ `go1.15.6 build hello.go`
+    
+    + Go SDK Replacement :
+    - Once you have validated that your code works, you can delete the secondary environment by finding its GOROOT, 
+      deleting it, and then deleting its binary from your $GOPATH/bin directory. Here’s how do that on Mac OS, Linux, and BSD:
+      $ `go1.15.6 env GOROOT`
+      /Users/gobook/sdk/go1.15.6
+      $ `rm -rf $(go1.15.6 env GOROOT)`
+      $ `rm $(go env GOPATH)/bin/go1.15.6`
+  
+    + NB: with `brew` tools i used previously to install golang you don't need all this steps, 
+          the tool itself handle safe deletion and update of the newer version of golang.
+      
+      
+  
+
+
+  
