@@ -1,2 +1,2 @@
-# golang_fundamentals
+# Golang Fundamentals
 Basic To Advanced Level on Golang.
