@@ -159,4 +159,20 @@ func main() {
 
 	fmt.Println(set, values)
 
+	// Structs
+
+	type Person struct {
+		name string
+		age  int
+		pet  string
+	}
+
+	var md Person
+	md.name = "mdrahali"
+	md.age = 24
+	md.pet = "Cat - Claudia"
+	fmt.Println(md)
+
+	bob := Person{"bob", 24, "Dog"}
+	fmt.Println(bob)
 }
