@@ -115,7 +115,9 @@ as NPM or Maven, go install new packages from there repositories as example belo
     + NB: with `brew` tools i used previously to install golang you don't need all this steps, 
           the tool itself handle safe deletion and update of the newer version of golang.
       
-      
+3- Primitive Types and Declarations :
+
+  
   
 
 
