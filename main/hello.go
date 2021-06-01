@@ -90,4 +90,33 @@ func main() {
 	j := make([]int, 4)
 	num := copy(j, s[:2])
 	fmt.Println(j, num)
+
+	// Runes, Strings and Bytes
+
+	var ss string = "Hello world"
+	var bb byte = ss[6] // this will show us The code ASCI of the letter in the sixth position
+	fmt.Println(bb, ss)
+
+	// String support bytes from 1 to 4, letters are all one bytes
+	// but for emojis they are 4 bytes
+
+	var s1 string = "Hello 🌞"
+	var s2 string = s1[4:7]
+	var s3 string = s1[:5]
+	var s4 string = s1[6:]
+
+	fmt.Println(s2, s3, s4, len(s4)) // emoji is only is 4 cases
+
+	var rn rune = 'x'
+	var ss3 string = string(rn)
+	var b1 byte = 'y'
+
+	fmt.Println(rn, ss3, b1)
+
+	var s5 string = "Hello 🌞"
+	var rn1 []rune = []rune(s5)
+	var bl []byte = []byte(s5)
+
+	fmt.Println(rn1, bl)
+
 }
