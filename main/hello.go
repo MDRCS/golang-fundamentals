@@ -119,4 +119,44 @@ func main() {
 
 	fmt.Println(rn1, bl)
 
+	// Maps
+
+	var dict = map[string]string{"full_name": "mdrahali"}
+	fmt.Println(dict["full_name"])
+	//teams := map[string]int{}
+	teams := map[string][]string{
+		"Real Madrid":       []string{"Varane", "Sergio Ramos", "Navas"},
+		"Manchester United": []string{"Rashford", "De Gea", "Di Maria"},
+		"Barcelona":         []string{"Messi", "Pique", "Rakitic"},
+	}
+
+	fmt.Println(teams["Barcelona"])
+
+	/*
+		If you know how many key-value pairs you intend to put in the map, but don’t know the exact values,
+		you can use make to create a map with a default size:
+	*/
+
+	ages := make(map[int]string, 10)
+
+	//	TIP: Use a map when the order of elements doesn’t matter. Use a slice when the order of elements is important.”
+
+	ages[10] = "second"
+	ages[11] = "third"
+
+	delete(ages, 10)
+	fmt.Println(ages)
+
+	// SETS
+	// NB : this data structure doesn't exist but we can simulate it using maps
+
+	set := map[int]bool{}
+	values := []int{1, 3, 44, 2, 6, 1, 2, 3}
+
+	for _, v := range values {
+		set[v] = true
+	}
+
+	fmt.Println(set, values)
+
 }
